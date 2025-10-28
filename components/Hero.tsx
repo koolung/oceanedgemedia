@@ -10,8 +10,8 @@ export default function Hero() {
         backgroundImage: 'url(/images/bg.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-      }}
+        backgroundAttachment: 'scroll',
+      } as React.CSSProperties & { WebkitBackgroundAttachment?: string }}
     >
       {/* Subtle overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-800/70 to-slate-900/80" />
