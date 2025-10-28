@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply transition-colors duration-300;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-50;
+  background-attachment: fixed;
+}
+
+/* Glassmorphism effect */
+.glass {
+  @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-lg;
+}
+
+.glass-sm {
+  @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-md;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent;
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-cyan-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-cyan-400;
+}
+
+/* Selection color */
+::selection {
+  @apply bg-cyan-500/30 text-cyan-100;
+}
+
+/* Prevent GIF looping in splash */
+img[src*=".gif"] {
+  animation: none !important;
+}
+
+/* Hover effects */
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+}
+
+.hover-glow {
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Border gradient */
+.border-gradient {
+  background-image: linear-gradient(to right, #06b6d4, #3b82f6);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}

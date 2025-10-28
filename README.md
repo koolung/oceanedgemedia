@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# OceanEdge - Modern Next.js Website Template
 
-## Getting Started
+A super modern, smooth, and stunning Next.js website template featuring glassmorphism design, smooth animations, and beautiful gradients.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Modern Design**: Glassmorphism and gradient effects
+- **Smooth Animations**: Framer Motion animations throughout
+- **Responsive**: Mobile-first responsive design
+- **Fast Performance**: Optimized Next.js with automatic code splitting
+- **TypeScript**: Fully typed with TypeScript
+- **Tailwind CSS**: Utility-first CSS framework
+- **SEO Friendly**: Next.js built-in SEO optimizations
+- **Dark Mode**: Beautiful dark theme with cyan accents
+
+## 🛠️ Tech Stack
+
+- **Next.js 14**: React framework
+- **React 18**: UI library
+- **TypeScript**: Type safety
+- **Tailwind CSS**: Styling
+- **Framer Motion**: Animations
+- **Lucide React**: Icons
+
+## 📦 Installation
+
+### Prerequisites
+- Node.js 16+ and npm/yarn installed
+
+### Setup
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+   or
+   ```bash
+   yarn install
+   ```
+
+2. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+   or
+   ```bash
+   yarn dev
+   ```
+
+3. **Open your browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 🏗️ Project Structure
+
+```
+oceanedgemedia/
+├── components/          # Reusable components
+│   ├── Header.tsx
+│   ├── Hero.tsx
+│   ├── Features.tsx
+│   ├── Testimonials.tsx
+│   ├── Contact.tsx
+│   ├── CTA.tsx
+│   ├── Footer.tsx
+│   └── Layout.tsx
+├── pages/              # Next.js pages
+│   ├── _app.tsx
+│   └── index.tsx
+├── styles/             # Global styles
+│   └── globals.css
+├── public/             # Static assets
+├── tailwind.config.js  # Tailwind configuration
+├── tsconfig.json       # TypeScript configuration
+└── package.json        # Dependencies
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📝 Available Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **`npm run dev`**: Start development server
+- **`npm run build`**: Build for production
+- **`npm run start`**: Start production server
+- **`npm run lint`**: Run ESLint
+- **`npm run type-check`**: Run TypeScript type checker
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎨 Customization
 
-## Learn More
+### Colors
+Edit the theme colors in `tailwind.config.js`:
+```javascript
+colors: {
+  primary: '#0f172a',
+  secondary: '#1e293b',
+  accent: '#06b6d4',
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Content
+- Update component text in `components/` directory
+- Modify page content in `pages/index.tsx`
+- Update footer links in `components/Footer.tsx`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Animations
+- Adjust animation delays and durations in component `transition` props
+- Customize animation keyframes in `tailwind.config.js`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Deployment
 
-## Deploy on Vercel
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Import your repository on [Vercel](https://vercel.com)
+3. Vercel will automatically detect Next.js and deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Other Platforms
+```bash
+npm run build
+npm run start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## 💡 Tips
+
+- Use the smooth scroll behavior for better UX
+- Customize the gradient text by modifying `.gradient-text` class
+- Add more icons from `lucide-react` library
+- Extend animations with Framer Motion documentation
+
+## 🤝 Contributing
+
+Feel free to fork this project and submit pull requests for any improvements.
+
+## 📧 Support
+
+For support, please open an issue on GitHub or contact us.
+
+---
+
+Built with ❤️ by OceanEdge Media
