@@ -12,51 +12,65 @@ interface GalleryItem {
 }
 
 const galleryItems: GalleryItem[] = [
-  {
-    id: 1,
-    title: 'E-Commerce Platform',
-    category: 'Web Design',
-    image: '/images/gallery/project-1.jpg',
-    description: 'Modern e-commerce site with seamless checkout experience',
-  },
-  {
-    id: 2,
-    title: 'Brand Identity System',
-    category: 'Logo Design',
-    image: '/images/gallery/project-2.jpg',
-    description: 'Complete branding package for tech startup',
-  },
-  {
-    id: 3,
-    title: 'Social Media Campaign',
-    category: 'Social Media',
-    image: '/images/gallery/project-3.jpg',
-    description: 'Viral campaign that increased engagement by 300%',
-  },
-  {
-    id: 4,
-    title: 'Corporate Website',
-    category: 'Web Design',
-    image: '/images/gallery/project-4.jpg',
-    description: 'Professional corporate site with CMS integration',
-  },
-  {
-    id: 5,
-    title: 'Digital Marketing Strategy',
-    category: 'Digital Marketing',
-    image: '/images/gallery/project-5.jpg',
-    description: 'Comprehensive marketing strategy execution',
-  },
-  {
-    id: 6,
-    title: 'Restaurant Branding',
-    category: 'Logo Design',
-    image: '/images/gallery/project-6.jpg',
-    description: 'Full restaurant identity from logo to signage',
-  },
+    {
+        id: 1,
+        title: 'Brand Identity System',
+        category: 'Logo Design',
+        image: '/images/gallery/logo1.jpg',
+        description: 'Complete branding package for tech startup',
+    },
+    {
+        id: 2,
+        title: 'Brand Identity System',
+        category: 'Logo Design',
+        image: '/images/gallery/logo2.jpg',
+        description: 'Complete branding package for tech startup',
+    },
+    {
+        id: 3,
+        title: 'Social Media Campaign',
+        category: 'Social Media',
+        image: '/images/gallery/social1.jpg',
+        description: 'Viral campaign that increased engagement by 300%',
+    },
+    {
+        id: 4,
+        title: 'Social Media Campaign',
+        category: 'Social Media',
+        image: '/images/gallery/social2.jpg',
+        description: 'Viral campaign that increased engagement by 300%',
+    },
+    {
+        id: 5,
+        title: 'E-Commerce Platform',
+        category: 'Web Design',
+        image: '/images/gallery/2.png',
+        description: 'Modern e-commerce site with seamless checkout experience',
+    },
+    {
+        id: 6,
+        title: 'E-Commerce Platform',
+        category: 'Web Design',
+        image: '/images/gallery/3.png',
+        description: 'Modern e-commerce site with seamless checkout experience',
+    },
+    {
+        id: 7,
+        title: 'E-Commerce Platform',
+        category: 'Web Design',
+        image: '/images/gallery/4.png',
+        description: 'Modern e-commerce site with seamless checkout experience',
+    },
+    {
+        id: 8,
+        title: 'Social Media Campaign',
+        category: 'Social Media',
+        image: '/images/gallery/social3.jpg',
+        description: 'Viral campaign that increased engagement by 300%',
+    },
 ];
 
-const categories = ['All', 'Web Design', 'Logo Design', 'Social Media', 'Digital Marketing'];
+const categories = ['All', 'Web Design', 'Logo Design', 'Social Media'];
 
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState('All');
