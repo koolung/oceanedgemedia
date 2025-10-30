@@ -48,20 +48,22 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <motion.button
+                <motion.a
+                href="#contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-semibold text-white hover-glow flex items-center justify-center gap-2"
-              >
+                >
                 Get Started <ArrowRight size={20} />
-              </motion.button>
-              <motion.button
+                </motion.a>
+                <motion.a
+                href="#gallery"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 glass rounded-lg font-semibold text-slate-100 hover-glow"
-              >
+                >
                 Learn More
-              </motion.button>
+                </motion.a>
             </motion.div>
 
             {/* Stats */}
@@ -72,8 +74,8 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               {[
-                { number: '10K+', label: 'Users' },
-                { number: '99.9%', label: 'Uptime' },
+                { number: '1K+', label: 'Clients' },
+                { number: '99.9%', label: 'Satisfaction' },
                 { number: '24/7', label: 'Support' },
               ].map((stat, index) => (
                 <div key={index}>

@@ -1,0 +1,23 @@
+{
+  "name": "Ocean Edge Media",
+  "short_name": "Ocean Edge",
+  "description": "Web Design, Logo Design, and Social Media Marketing Services",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06242d",
+  "theme_color": "#06b6d4",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
