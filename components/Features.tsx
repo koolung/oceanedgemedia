@@ -108,7 +108,7 @@ export default function Features() {
 
               {/* What's Included */}
               <div className="border-t border-slate-300/30 pt-4">
-                <h4 className="text-sm font-semibold text-slate-900 mb-3 text-center">What's included:</h4>
+                <h4 className="text-sm font-semibold text-slate-900 mb-3 text-center">What&apos;s included:</h4>
                 <ul className="space-y-2">
                   {feature.includes.map((item, i) => (
                     <li key={i} className="flex items-center justify-center gap-3 text-sm text-slate-700">

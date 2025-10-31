@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 export default function Hero() {
@@ -38,17 +39,18 @@ export default function Hero() {
             {/* Mobile Image with Transition */}
             <motion.div 
               key={bgImage}
-              className="md:hidden mb-8 w-full"
+              className="md:hidden mb-8 w-full relative"
               style={{ height: '220px' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 1.5 }}
             >
-              <img 
+              <Image 
                 src={images[bgImage]} 
                 alt="Portfolio" 
-                className="w-full h-full object-cover rounded-lg"
+                fill
+                className="object-cover rounded-lg"
               />
             </motion.div>
 
@@ -126,12 +128,18 @@ export default function Hero() {
             <div className="relative w-full h-17 md:h-full flex items-center justify-center">
 
               {/* Bottle Image */}
-              <motion.img
-                src="/images/marketing/bottle.jpg"
-                alt="Product Mockup"
+              <motion.div
                 whileHover={{ y: -10 }}
-                className="relative z-10 w-[100%] h-auto"
-              />
+                className="relative z-10 w-full h-auto"
+              >
+                <Image
+                  src="/images/marketing/bottle.jpg"
+                  alt="Product Mockup"
+                  width={500}
+                  height={500}
+                  className="w-full h-auto"
+                />
+              </motion.div>
             </div>
           </motion.div>
         </div>
