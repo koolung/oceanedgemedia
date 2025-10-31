@@ -96,6 +96,13 @@ const galleryItems: GalleryItem[] = [
         image: '/images/portfolio/fb1.jpg',
         description: 'Multi-platform social media campaign',
     },
+    {
+        id: 13,
+        title: 'Business Branding',
+        category: 'Logo Design',
+        image: '/images/portfolio/truck1.jpg',
+        description: 'Professional custom business branding ',
+    },
 ];
 
 const categories = ['All', 'Web Design', 'Logo Design', 'Social Media'];
