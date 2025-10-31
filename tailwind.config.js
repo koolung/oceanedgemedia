@@ -12,6 +12,7 @@ module.exports = {
         secondary: '#1e293b',
         accent: '#06b6d4',
         light: '#f8fafc',
+        'brand-blue': '#192B39',
       },
       animation: {
         fadeIn: 'fadeIn 0.8s ease-in-out',

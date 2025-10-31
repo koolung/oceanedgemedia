@@ -1,21 +1,32 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 export default function Hero() {
+  const [bgImage, setBgImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBgImage((prev) => (prev + 1) % 2);
+    }, 10000); // Switch every 10 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const images = [
+    '/images/marketing/cards.jpeg',
+    '/images/marketing/billboard3.jpg',
+  ];
+
   return (
     <section 
       id="home" 
       className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden"
       style={{
-        backgroundImage: 'url(/images/bg.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        background: 'linear-gradient(to bottom, #F3F4F6 0%, #EAEAEA 100%)',
         backgroundAttachment: 'scroll',
       } as React.CSSProperties & { WebkitBackgroundAttachment?: string }}
     >
-      {/* Subtle overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-800/70 to-slate-900/80" />
-      
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -24,13 +35,30 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
+            {/* Mobile Image with Transition */}
+            <motion.div 
+              key={bgImage}
+              className="md:hidden mb-8 w-full"
+              style={{ height: '220px' }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.5 }}
+            >
+              <img 
+                src={images[bgImage]} 
+                alt="Portfolio" 
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </motion.div>
+
             <motion.h1
               className="text-5xl md:text-7xl font-bold leading-tight mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              The Last Agency You&apos;ll <br></br><span className="gradient-text">Ever Need</span>
+              The Last Agency You&apos;ll <br></br><span style={{ color: '#879eb9ff' }}>Ever Need</span>
             </motion.h1>
 
             <motion.p
@@ -52,7 +80,8 @@ export default function Hero() {
                 href="#contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-semibold text-white hover-glow flex items-center justify-center gap-2"
+                className="px-8 py-4 rounded-lg font-semibold text-white hover-glow flex items-center justify-center gap-2"
+                style={{ backgroundColor: '#192B39' }}
                 >
                 Get Started <ArrowRight size={20} />
                 </motion.a>
@@ -60,7 +89,8 @@ export default function Hero() {
                 href="#gallery"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 glass rounded-lg font-semibold text-slate-100 hover-glow"
+                className="px-8 py-4 glass rounded-lg font-semibold hover-glow text-center flex items-center justify-center gap-2"
+                style={{ color: '#192B39' }}
                 >
                 Learn More
                 </motion.a>
@@ -68,7 +98,7 @@ export default function Hero() {
 
             {/* Stats */}
             <motion.div
-              className="flex gap-8 mt-12 pt-8 border-t border-slate-700"
+              className="flex gap-8 mt-12 pt-8 border-t border-slate-700 justify-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
@@ -78,8 +108,8 @@ export default function Hero() {
                 { number: '99.9%', label: 'Satisfaction' },
                 { number: '24/7', label: 'Support' },
               ].map((stat, index) => (
-                <div key={index}>
-                  <p className="text-3xl font-bold gradient-text">{stat.number}</p>
+                <div key={index} className="text-center">
+                  <p className="text-3xl font-bold" style={{ color: '#192B39' }}>{stat.number}</p>
                   <p className="text-slate-400">{stat.label}</p>
                 </div>
               ))}
@@ -91,32 +121,17 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            className="relative flex items-center justify-center"
           >
-            <div className="relative w-full h-96 md:h-full">
-              {/* Gradient Orbs */}
-              <motion.div
-                animate={{ y: [0, -20, 0] }}
-                transition={{ duration: 6, repeat: Infinity }}
-                className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"
-              />
-              <motion.div
-                animate={{ y: [0, 20, 0] }}
-                transition={{ duration: 8, repeat: Infinity, delay: 1 }}
-                className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"
-              />
+            <div className="relative w-full h-17 md:h-full flex items-center justify-center">
 
-              {/* Card */}
-              <motion.div
+              {/* Bottle Image */}
+              <motion.img
+                src="/images/marketing/bottle.jpg"
+                alt="Product Mockup"
                 whileHover={{ y: -10 }}
-                className="relative glass p-8 rounded-2xl backdrop-blur-xl"
-              >
-                <div className="space-y-4">
-                  <div className="h-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded w-1/3" />
-                  <div className="h-2 bg-slate-600 rounded w-2/3" />
-                  <div className="h-2 bg-slate-600 rounded w-1/2" />
-                </div>
-              </motion.div>
+                className="relative z-10 w-[100%] h-auto"
+              />
             </div>
           </motion.div>
         </div>

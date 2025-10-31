@@ -20,7 +20,8 @@ export default function CTA() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-semibold text-white hover-glow inline-flex items-center gap-2"
+            className="px-8 py-4 rounded-lg font-semibold text-white hover-glow inline-flex items-center gap-2"
+            style={{ backgroundColor: '#192B39' }}
           >
             Start Now <ArrowRight size={20} />
           </motion.button>

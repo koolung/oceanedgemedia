@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import Clients from '../components/Clients';
 import Features from '../components/Features';
 import Gallery from '../components/Gallery';
 import Testimonials from '../components/Testimonials';
@@ -22,6 +23,7 @@ export default function Home() {
 
       <Header />
       <Hero />
+      <Clients />
       <Features />
       <Gallery />
       <Testimonials />

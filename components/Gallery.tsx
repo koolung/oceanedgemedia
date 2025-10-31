@@ -14,59 +14,87 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
     {
         id: 1,
-        title: 'Brand Identity System',
+        title: 'Product Logo Design',
         category: 'Logo Design',
-        image: '/images/gallery/logo1.jpg',
-        description: 'Complete branding package for tech startup',
+        image: '/images/portfolio/product1.jpg',
+        description: 'Professional product mockup and branding',
     },
     {
         id: 2,
-        title: 'Brand Identity System',
+        title: 'Brand Product Display',
         category: 'Logo Design',
-        image: '/images/gallery/logo2.jpg',
-        description: 'Complete branding package for tech startup',
+        image: '/images/portfolio/product2.jpg',
+        description: 'Premium packaging and product design',
     },
     {
         id: 3,
-        title: 'Social Media Campaign',
+        title: 'Instagram Content Creation',
         category: 'Social Media',
-        image: '/images/gallery/social1.jpg',
-        description: 'Viral campaign that increased engagement by 300%',
+        image: '/images/portfolio/insta1.jpg',
+        description: 'Engaging social media content strategy',
     },
     {
         id: 4,
-        title: 'Social Media Campaign',
+        title: 'Instagram Campaign',
         category: 'Social Media',
-        image: '/images/gallery/social2.jpg',
-        description: 'Viral campaign that increased engagement by 300%',
+        image: '/images/portfolio/insta2.jpg',
+        description: 'Creative visual storytelling for social platforms',
     },
     {
         id: 5,
-        title: 'E-Commerce Platform',
-        category: 'Web Design',
-        image: '/images/gallery/2.png',
-        description: 'Modern e-commerce site with seamless checkout experience',
+        title: 'Instagram Content Management',
+        category: 'Social Media',
+        image: '/images/portfolio/insta3.jpg',
+        description: 'Dynamic and interactive social content',
     },
     {
         id: 6,
-        title: 'E-Commerce Platform',
+        title: 'Modern Web Design',
         category: 'Web Design',
-        image: '/images/gallery/3.png',
-        description: 'Modern e-commerce site with seamless checkout experience',
+        image: '/images/portfolio/web1.jpg',
+        description: 'Responsive and user-friendly website design',
     },
     {
         id: 7,
-        title: 'E-Commerce Platform',
+        title: 'E-Commerce Site',
         category: 'Web Design',
-        image: '/images/gallery/4.png',
-        description: 'Modern e-commerce site with seamless checkout experience',
+        image: '/images/portfolio/web2.jpg',
+        description: 'Professional e-commerce platform development',
     },
     {
         id: 8,
-        title: 'Social Media Campaign',
+        title: 'Business Website',
+        category: 'Web Design',
+        image: '/images/portfolio/web3.jpg',
+        description: 'Corporate site with modern aesthetics',
+    },
+    {
+        id: 9,
+        title: 'Portfolio Website',
+        category: 'Web Design',
+        image: '/images/portfolio/web4.jpg',
+        description: 'Creative portfolio showcase design',
+    },
+    {
+        id: 10,
+        title: 'Service Website',
+        category: 'Web Design',
+        image: '/images/portfolio/web5.jpg',
+        description: 'Service-based business website',
+    },
+    {
+        id: 11,
+        title: 'Digital Marketing Site',
+        category: 'Web Design',
+        image: '/images/portfolio/web6.jpg',
+        description: 'Conversion-optimized marketing website',
+    },
+    {
+        id: 12,
+        title: 'Social Media Marketing',
         category: 'Social Media',
-        image: '/images/gallery/social3.jpg',
-        description: 'Viral campaign that increased engagement by 300%',
+        image: '/images/portfolio/fb1.jpg',
+        description: 'Multi-platform social media campaign',
     },
 ];
 
@@ -89,7 +117,7 @@ export default function Gallery() {
   };
 
   return (
-    <section id="gallery" className="py-20 px-6 bg-gradient-to-b from-slate-900/50 to-slate-900">
+    <section id="gallery" className="py-20 px-6 bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
@@ -100,7 +128,7 @@ export default function Gallery() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="gradient-text">Our Work</span>
           </h2>
-          <p className="text-slate-400 text-lg">
+          <p className="text-slate-600 text-lg">
             Explore our portfolio of successful projects
           </p>
         </motion.div>
@@ -118,9 +146,10 @@ export default function Gallery() {
               whileTap={{ scale: 0.95 }}
               className={`px-6 py-2 rounded-lg font-semibold transition-all duration-300 ${
                 activeCategory === category
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover-glow'
+                  ? 'text-white hover-glow'
                   : 'bg-slate-800 text-slate-400 hover:text-slate-100 border border-slate-700'
               }`}
+              style={activeCategory === category ? { backgroundColor: '#192B39' } : {}}
             >
               {category}
             </motion.button>
@@ -207,7 +236,8 @@ export default function Gallery() {
               onClick={prevSlide}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 md:-translate-x-8 z-20 p-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover-glow"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 md:-translate-x-8 z-20 p-2 rounded-full text-white hover-glow"
+              style={{ backgroundColor: '#192B39' }}
             >
               <ChevronLeft size={24} />
             </motion.button>
@@ -216,7 +246,8 @@ export default function Gallery() {
               onClick={nextSlide}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 md:translate-x-8 z-20 p-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover-glow"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 md:translate-x-8 z-20 p-2 rounded-full text-white hover-glow"
+              style={{ backgroundColor: '#192B39' }}
             >
               <ChevronRight size={24} />
             </motion.button>
@@ -230,11 +261,12 @@ export default function Gallery() {
                 onClick={() => setCurrentIndex(index)}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.95 }}
-                className={`rounded-full transition-all duration-300 ${
+                className={`rounded-full transition-all duration-300 w-3 h-3 ${
                   index === currentIndex
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 w-3 h-3'
+                    ? 'w-3 h-3'
                     : 'bg-slate-600 w-2 h-2 hover:bg-slate-500'
                 }`}
+                style={index === currentIndex ? { backgroundColor: '#192B39' } : {}}
               />
             ))}
           </div>

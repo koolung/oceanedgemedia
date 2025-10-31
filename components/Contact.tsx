@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Github, Twitter } from 'lucide-react';
+import { Mail, Linkedin, Instagram, Facebook } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -54,7 +54,8 @@ export default function Contact() {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             type="submit"
-            className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-semibold hover-glow"
+            className="w-full px-6 py-3 rounded-lg font-semibold hover-glow text-white"
+            style={{ backgroundColor: '#192B39' }}
           >
             Send Message
           </motion.button>
@@ -68,10 +69,10 @@ export default function Contact() {
           className="flex justify-center gap-6 mt-12"
         >
           {[
-            { icon: Mail, href: 'mailto:hello@oceanedge.com' },
-            { icon: Linkedin, href: '#' },
-            { icon: Github, href: '#' },
-            { icon: Twitter, href: '#' },
+            { icon: Mail, href: 'mailto:oceanedgemedia@hotmail.com' },
+            { icon: Instagram, href: 'https://www.instagram.com/oceanedge_media/' },
+            { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61574627555191' },
+            { icon: Linkedin, href: 'https://www.linkedin.com/in/ocean-pratt-3695b825a/' },
           ].map(({ icon: Icon, href }, index) => (
             <motion.a
               key={index}
