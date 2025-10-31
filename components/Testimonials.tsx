@@ -12,7 +12,7 @@ const testimonials: Testimonial[] = [
   {
     name: 'Magical Memories Rentals',
     role: 'Business Owner',
-    content: 'Working with Ocean Edge Media has been an absolute game-changer for our business! Her expertise, dedication and attention to detail have been invaluable. She goes above and beyond to ensure our content is engaging, on-trend, and aligned with our goals. More importantly, she is an absolute pleasure to work with - professional, responsible, and truly invested in our success! We highly recommend Ocean and Maritime Social Solutions to anyone looking to elevate their digital presence. She is a true asset, and we are beyond grateful for all her hard work!',
+    content: 'Working with Ocean Edge Media has been an absolute game-changer for our business! Her expertise, dedication and attention to detail have been invaluable. She goes above and beyond to ensure our content is engaging, on-trend, and aligned with our goals. More importantly, she is an absolute pleasure to work with - professional, responsible, and truly invested in our success! We highly recommend Ocean Edge Media to anyone looking to elevate their digital presence. She is a true asset, and we are beyond grateful for all her hard work!',
     logo: '/images/partners/mmr.jpg',
   },
   {
