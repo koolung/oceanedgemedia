@@ -99,13 +99,20 @@ const galleryItems: GalleryItem[] = [
     {
         id: 13,
         title: 'Business Branding',
-        category: 'Logo Design',
+        category: 'Branding',
         image: '/images/portfolio/truck1.jpg',
+        description: 'Professional custom business branding ',
+    },
+    {
+        id: 14,
+        title: 'Business Branding2',
+        category: 'Branding',
+        image: '/images/marketing/bottle.jpg',
         description: 'Professional custom business branding ',
     },
 ];
 
-const categories = ['All', 'Web Design', 'Logo Design', 'Social Media'];
+const categories = ['All', 'Web Design', 'Logo Design', 'Branding', 'Social Media'];
 
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState('All');
