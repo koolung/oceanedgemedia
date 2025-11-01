@@ -10,7 +10,6 @@ const clients = [
   { name: 'Hardiman', src: '/images/partners/hardiman.png' },
   { name: 'LevPlan', src: '/images/partners/levplan.svg' },
   { name: 'Maureen', src: '/images/partners/maureen.jpg' },
-  { name: 'Ironclad', src: '/images/partners/ironclad.png' },
 ];
 
 export default function Clients() {
