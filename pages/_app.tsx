@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import '../styles/globals.css';
 import LogoAnimationSplash from '../components/LogoAnimationSplash';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -19,8 +20,18 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#06242d" />
       </Head>
-      <LogoAnimationSplash />
-      <Component {...pageProps} />
+      <GoogleReCaptchaProvider
+        reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+        scriptProps={{
+          async: false,
+          defer: false,
+          appendTo: 'head',
+          nonce: undefined,
+        }}
+      >
+        <LogoAnimationSplash />
+        <Component {...pageProps} />
+      </GoogleReCaptchaProvider>
     </>
   );
 }
