@@ -83,7 +83,7 @@ export default async function handler(
     // Email content with professional template
     const mailOptions = {
       from: process.env.SMTP_FROM,
-      to: process.env.SMTP_USER, // Send to your own email
+      to: 'oceanedgemedia@hotmail.com', // Send to your hotmail
       subject: `🌊 New Contact Form Submission: ${subject}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
       html: `
