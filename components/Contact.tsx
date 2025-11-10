@@ -48,10 +48,17 @@ export default function Contact() {
         setStatus({ type: 'success', message: data.message });
         setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
-        setStatus({ type: 'error', message: data.message });
+        setStatus({ 
+          type: 'error', 
+          message: data.message || 'Failed to send message. Please try again.' 
+        });
       }
     } catch (error) {
-      setStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
+      console.error('Contact form error:', error);
+      setStatus({ 
+        type: 'error', 
+        message: 'Failed to send message. Please try again.' 
+      });
     }
   };
 

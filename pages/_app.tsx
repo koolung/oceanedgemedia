@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#06242d" />
       </Head>
       <GoogleReCaptchaProvider
-        reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+        reCaptchaKey="6LcuMAgsAAAAAGn7HGDoZkdNl_0LRJAflBtXVRQk"
         scriptProps={{
           async: false,
           defer: false,

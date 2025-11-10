@@ -1,9 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
+import path from 'path';
+import fs from 'fs';
 
 type ResponseData = {
   message: string;
   success: boolean;
+  error?: string;
 };
 
 export default async function handler(
@@ -57,6 +60,25 @@ export default async function handler(
         pass: process.env.SMTP_PASSWORD,
       },
     });
+
+    // Try to find logo file, fallback to URL if not found
+    let logoAttachment;
+    const logoPath = path.join(process.cwd(), 'public', 'images', 'logo', 'white.png');
+    
+    if (fs.existsSync(logoPath)) {
+      logoAttachment = {
+        filename: 'logo.png',
+        path: logoPath,
+        cid: 'logo',
+      };
+    } else {
+      // Fallback: use online logo URL
+      logoAttachment = {
+        filename: 'logo.png',
+        path: 'https://oceanedgemedia.co/images/logo/white.png',
+        cid: 'logo',
+      };
+    }
 
     // Email content with professional template
     const mailOptions = {
@@ -190,13 +212,7 @@ export default async function handler(
         </html>
       `,
       replyTo: email,
-      attachments: [
-        {
-          filename: 'logo.png',
-          path: process.cwd() + '/public/images/logo/white.png',
-          cid: 'logo', // same as in the html img src
-        },
-      ],
+      attachments: [logoAttachment],
     };
 
     // Send email
@@ -211,6 +227,7 @@ export default async function handler(
     return res.status(500).json({
       message: 'Failed to send message. Please try again later.',
       success: false,
+      error: error instanceof Error ? error.message : 'Unknown error',
     });
   }
 }
