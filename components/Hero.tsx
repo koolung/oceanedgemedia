@@ -106,7 +106,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               {[
-                { number: '1K+', label: 'Clients' },
+                { number: '100+', label: 'Clients' },
                 { number: '99.9%', label: 'Satisfaction' },
                 { number: '24/7', label: 'Support' },
               ].map((stat, index) => (
