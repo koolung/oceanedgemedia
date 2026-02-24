@@ -4,9 +4,7 @@ import styles from '../styles/clients.module.css';
 const clients = [
   { name: 'BWS', src: '/images/partners/bws.png' },
   { name: 'East Hants Glass', src: '/images/partners/easthantsglass.jpg' },
-  { name: 'First Choice Hair Cutters', src: '/images/partners/firstchoicehaircutters.svg' },
   { name: 'GC', src: '/images/partners/gc.svg' },
-  { name: 'Happy Harrys', src: '/images/partners/happyharrys.svg' },
   { name: 'Hardiman', src: '/images/partners/hardiman.png' },
   { name: 'LevPlan', src: '/images/partners/levplan.svg' },
   { name: 'Maureen', src: '/images/partners/maureen.jpg' },
